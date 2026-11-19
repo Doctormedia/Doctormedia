@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoctorMedia | Digital Marketing for Healthcare</title>
+<meta name="description" content="DoctorMedia helps clinics and doctors get more patient enquiries with Google Ads, Meta Ads, SEO and social media. Founded by Abhishek, 5+ years experience.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1F4D;--blue:#0B4FC4;--teal:#12C9A2;--teal-d:#0A9C7D;--mist:#F2F7FB;--ink:#1B2740;--mute:#5B6785;--line:#DCE5F0;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Outfit',sans-serif;color:var(--navy);line-height:1.15;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav img{height:44px;width:auto}
+.nav nav{display:flex;gap:26px;align-items:center;font-weight:500;font-size:15px}
+.btn{display:inline-block;background:var(--teal);color:var(--navy);font-weight:700;padding:14px 26px;border-radius:10px;border:0;cursor:pointer;font:700 16px 'DM Sans',sans-serif;transition:transform .15s,background .15s}
+.btn:hover{background:#0fe0b4;transform:translateY(-2px)}
+.btn.dark{background:var(--navy);color:#fff}.btn.dark:hover{background:var(--blue)}
+.btn.sm{padding:10px 18px;font-size:14px}
+/* hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(18,201,162,.28),transparent 68%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;padding-top:84px;padding-bottom:84px;align-items:center;position:relative;z-index:1}
+.hero h1{color:#fff;font-size:clamp(36px,5.2vw,60px);font-weight:800}
+.hero h1 span{color:var(--teal)}
+.hero p.lead{margin:22px 0 32px;color:#C6D3EE;font-size:19px;max-width:520px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn.ghost{background:transparent;border:2px solid #3A5290;color:#fff}.btn.ghost:hover{background:#13307A}
+.offer{background:#fff;color:var(--ink);border-radius:20px;padding:30px;box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.offer h3{font-size:22px;margin-bottom:6px}
+.offer p{color:var(--mute);font-size:15px}
+.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+.timer div{background:var(--navy);color:#fff;border-radius:12px;text-align:center;padding:14px 4px}
+.timer b{display:block;font:800 30px 'Outfit',sans-serif;color:var(--teal)}
+.timer small{font-size:12px;color:#B7C5E6}
+.offer .btn{width:100%;text-align:center}
+.offer .tag{display:inline-block;background:#E4FBF5;color:var(--teal-d);font-weight:700;font-size:13px;padding:4px 12px;border-radius:99px;margin-bottom:12px}
+/* trust bar */
+.trust{background:var(--mist);border-bottom:1px solid var(--line)}
+.trust .wrap{padding-top:26px;padding-bottom:26px;display:flex;gap:18px 40px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.trust p{color:var(--mute);font-size:14px;font-weight:500}
+.trust ul{list-style:none;display:flex;gap:10px 30px;flex-wrap:wrap;font:700 18px 'Outfit',sans-serif;color:var(--navy)}
+section{padding:88px 0}
+.head{max-width:620px;margin-bottom:44px}
+.head h2{font-size:clamp(28px,3.6vw,42px)}
+.head p{color:var(--mute);margin-top:14px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:16px;padding:28px}
+.card:nth-child(1),.card:nth-child(4){background:var(--navy);border-color:var(--navy)}
+.card:nth-child(1) h3,.card:nth-child(4) h3{color:#fff}
+.card:nth-child(1) p,.card:nth-child(4) p{color:#C6D3EE}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{color:var(--mute);font-size:15.5px}
+.ic{width:44px;height:44px;border-radius:12px;background:#E4FBF5;display:grid;place-items:center;margin-bottom:18px;font-size:22px}
+.card:nth-child(1) .ic,.card:nth-child(4) .ic{background:#13307A}
+/* founder */
+.founder{background:var(--mist)}
+.founder .wrap{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}
+.avatar{aspect-ratio:1;border-radius:24px;background:linear-gradient(145deg,var(--blue),var(--teal));display:grid;place-items:center;color:#fff;font:800 96px 'Outfit',sans-serif;position:relative}
+.avatar span{position:absolute;bottom:-16px;right:-12px;background:var(--navy);font:700 15px 'DM Sans',sans-serif;padding:10px 16px;border-radius:12px}
+.founder h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:16px}
+.founder p{color:var(--mute);margin-bottom:14px;max-width:560px}
+.facts{display:flex;gap:34px;margin-top:22px;flex-wrap:wrap}
+.facts b{display:block;font:800 34px 'Outfit',sans-serif;color:var(--blue)}
+.facts small{color:var(--mute);font-size:14px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.step{padding:0 22px 0 0;position:relative}
+.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--blue);color:#fff;font:700 18px 'Outfit',sans-serif;margin-bottom:16px}
+.step:not(:last-child):after{content:"";position:absolute;top:21px;left:52px;right:10px;border-top:2px dashed var(--line)}
+.step h3{font-size:19px;margin-bottom:6px}
+.step p{color:var(--mute);font-size:15px}
+/* form */
+.contact{background:var(--navy)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.contact h2{color:#fff;font-size:clamp(28px,3.6vw,42px)}
+.contact .side p{color:#C6D3EE;margin:16px 0 22px}
+.contact ul{list-style:none;color:#fff;display:grid;gap:10px}
+.contact li:before{content:"✓";color:var(--teal);font-weight:800;margin-right:10px}
+form{background:#fff;border-radius:20px;padding:30px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-weight:700;font-size:14px;color:var(--navy);display:block;margin-bottom:6px}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font:16px 'DM Sans',sans-serif;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px rgba(11,79,196,.15)}
+fieldset{border:0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.checks label{display:flex;gap:8px;align-items:center;font-weight:500;color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin:0;cursor:pointer;font-size:15px}
+.checks label:has(input:checked){border-color:var(--teal-d);background:#E4FBF5}
+.err{color:#C0262D;font-size:14px;min-height:18px}
+.ok{display:none;background:#E4FBF5;border:1.5px solid var(--teal-d);padding:16px;border-radius:12px;color:var(--navy);font-weight:500}
+footer{background:#06143A;color:#9FB0D6;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+footer img{height:38px;background:#fff;border-radius:8px;padding:4px 8px}
+.wa{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:28px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:30}
+@media(max-width:900px){
+.hero .wrap,.founder .wrap,.contact .wrap{grid-template-columns:1fr;gap:36px}
+.hero .wrap{padding-top:52px;padding-bottom:56px}
+.services{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr 1fr;gap:34px 10px}.step:after{display:none}
+.nav nav a:not(.btn){display:none}
+.founder .wrap{gap:40px}.avatar{max-width:260px}
+section{padding:60px 0}}
+@media(max-width:560px){.services,.row,.checks{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="#top"><img src="logo.png" alt="DoctorMedia logo"></a>
+<nav><a href="#services">Services</a><a href="#founder">About</a><a href="#process">Process</a><a class="btn sm" href="#contact">Get free audit</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>More patients for your clinic. <span>Not just more clicks.</span></h1>
+<p class="lead">DoctorMedia runs Google Ads, Meta Ads, SEO and social media for doctors and clinics, built around one number: booked consultations.</p>
+<div class="cta"><a class="btn" href="#contact">Get my free clinic audit</a><a class="btn ghost" href="#services">See services</a></div>
+</div>
+<aside class="offer" aria-label="Limited offer">
+<span class="tag">Limited offer</span>
+<h3>Free clinic growth audit</h3>
+<p>Ads, website and Google profile reviewed, with a written plan. Offer closes in:</p>
+<div class="timer" role="timer" aria-live="off">
+<div><b id="d">00</b><small>Days</small></div><div><b id="h">00</b><small>Hours</small></div><div><b id="m">00</b><small>Mins</small></div><div><b id="s">00</b><small>Secs</small></div>
+</div>
+<a class="btn" href="#contact">Claim free audit</a>
+</aside>
+</div></div>
+
+<div class="trust"><div class="wrap">
+<p>Trusted by clinics and health brands</p>
+<ul><li>Sejawata Clinic</li><li>The Intimacy Educator</li><li>TheSassy.in</li><li>GoReady.com</li><li>+ more</li></ul>
+</div></div>
+
+<section id="services"><div class="wrap">
+<div class="head"><h2>Everything a clinic needs to get found and get booked</h2><p>Pick one service or run all five together. Every plan starts with your goal and your budget.</p></div>
+<div class="services">
+<div class="card"><div class="ic">🎯</div><h3>Google Ads</h3><p>Show up when people search "doctor near me" or your treatment name. Tracked calls and form leads.</p></div>
+<div class="card"><div class="ic">📣</div><h3>Meta Ads</h3><p>Facebook and Instagram campaigns with compliant creatives that bring consultation enquiries.</p></div>
+<div class="card"><div class="ic">🔎</div><h3>SEO and Google Maps</h3><p>Rank your clinic locally, fix your Google Business Profile and bring steady free traffic.</p></div>
+<div class="card"><div class="ic">📱</div><h3>Social media</h3><p>Reels, posts and patient education content that builds trust before the first visit.</p></div>
+<div class="card"><div class="ic">💻</div><h3>Landing pages</h3><p>Fast, mobile-first pages with booking forms, built to turn ad clicks into appointments.</p></div>
+<div class="card"><div class="ic">📊</div><h3>Reports</h3><p>Plain monthly report: spend, leads, cost per lead and what we change next.</p></div>
+</div></div></section>
+
+<section class="founder" id="founder"><div class="wrap">
+<div class="avatar">A<span>Founder</span></div>
+<div>
+<h2>Hi, I'm Abhishek. I started DoctorMedia to fix healthcare marketing.</h2>
+<p>For 5 years I have managed ad accounts for clinics, wellness brands and health coaches across India and abroad. I know what works in healthcare: honest messaging, policy-safe ads and follow-up that turns a lead into a patient.</p>
+<p>When you work with DoctorMedia you talk to me directly, not an account manager.</p>
+<div class="facts"><div><b>5+</b><small>Years in digital marketing</small></div><div><b>5</b><small>Services under one roof</small></div><div><b>1:1</b><small>Direct founder access</small></div></div>
+</div></div></section>
+
+<section id="process"><div class="wrap">
+<div class="head"><h2>How we work</h2></div>
+<div class="steps">
+<div class="step"><h3>Audit</h3><p>We review your clinic, competitors and current marketing.</p></div>
+<div class="step"><h3>Plan</h3><p>You get a budget table, lead estimate and channel plan.</p></div>
+<div class="step"><h3>Launch</h3><p>Ads, pages and tracking go live within days.</p></div>
+<div class="step"><h3>Optimise</h3><p>Weekly improvements and a monthly report.</p></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div class="side">
+<h2>Tell us about your clinic</h2>
+<p>Share your budget and goal. We reply on WhatsApp within 24 hours with a plan.</p>
+<ul><li>Free audit, no obligation</li><li>Clear budget and lead projection</li><li>Healthcare ad policy compliant</li></ul>
+</div>
+<form id="f" novalidate>
+<div class="row">
+<div><label for="n">Your name</label><input type="text" id="n" autocomplete="name" required></div>
+<div><label for="p">WhatsApp number</label><input type="tel" id="p" autocomplete="tel" inputmode="tel" required></div>
+</div>
+<div class="row">
+<div><label for="c">Clinic or brand name</label><input type="text" id="c" required></div>
+<div><label for="e">Email (optional)</label><input type="email" id="e" autocomplete="email"></div>
+</div>
+<div class="row">
+<div><label for="sp">Speciality</label><select id="sp"><option>General clinic</option><option>Ayurveda</option><option>Homeopathy</option><option>Dental</option><option>Skin and hair</option><option>Sexual wellness</option><option>Other</option></select></div>
+<div><label for="b">Monthly ad budget</label><select id="b" required><option value="">Select budget</option><option>Under ₹15,000</option><option>₹15,000 - ₹30,000</option><option>₹30,000 - ₹75,000</option><option>₹75,000 - ₹1,50,000</option><option>Above ₹1,50,000</option><option>Not sure yet</option></select></div>
+</div>
+<fieldset><label>What do you want help with?</label>
+<div class="checks">
+<label><input type="checkbox" name="s" value="Google Ads"> Google Ads</label>
+<label><input type="checkbox" name="s" value="Meta Ads"> Meta Ads</label>
+<label><input type="checkbox" name="s" value="SEO"> SEO</label>
+<label><input type="checkbox" name="s" value="Social Media"> Social media</label>
+<label><input type="checkbox" name="s" value="Landing Page"> Landing page</label>
+<label><input type="checkbox" name="s" value="Not sure"> Not sure</label>
+</div></fieldset>
+<div><label for="g">Your goal</label><textarea id="g" rows="3" placeholder="Example: 30 consultation calls every month"></textarea></div>
+<div class="err" id="err" role="alert"></div>
+<button class="btn" type="submit">Send on WhatsApp</button>
+<div class="ok" id="ok">Thanks! WhatsApp is opening with your details. Just press send.</div>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<img src="logo.png" alt="DoctorMedia">
+<span>© <span id="y"></span> DoctorMedia. Digital marketing for healthcare.</span>
+</div></footer>
+<a class="wa" href="https://wa.me/91XXXXXXXXXX" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+// ===== EDIT THIS: your WhatsApp number with country code, no + or spaces =====
+var WHATSAPP="91XXXXXXXXXX";
+document.getElementById('y').textContent=new Date().getFullYear();
+document.querySelector('.wa').href="https://wa.me/"+WHATSAPP;
+
+// Timer: 48-hour offer, restarts for each visitor after it ends
+var KEY="dm_offer_end",end=0;
+try{end=parseInt(localStorage.getItem(KEY)||"0",10)}catch(e){}
+function reset(){end=Date.now()+48*3600*1000;try{localStorage.setItem(KEY,end)}catch(e){}}
+if(!end||end<Date.now())reset();
+function pad(n){return String(n).padStart(2,'0')}
+function tick(){
+ var t=end-Date.now();if(t<=0){reset();t=end-Date.now()}
+ var s=Math.floor(t/1000);
+ document.getElementById('d').textContent=pad(Math.floor(s/86400));
+ document.getElementById('h').textContent=pad(Math.floor(s%86400/3600));
+ document.getElementById('m').textContent=pad(Math.floor(s%3600/60));
+ document.getElementById('s').textContent=pad(s%60);
+}
+tick();setInterval(tick,1000);
+
+// Form -> WhatsApp message
+document.getElementById('f').addEventListener('submit',function(ev){
+ ev.preventDefault();
+ var v=function(i){return document.getElementById(i).value.trim()};
+ var err=document.getElementById('err');
+ var phone=v('p').replace(/\D/g,'');
+ if(!v('n')||!v('c')||!v('b')){err.textContent="Please fill your name, clinic name and budget.";return}
+ if(phone.length<10){err.textContent="Enter a valid 10-digit WhatsApp number.";return}
+ err.textContent="";
+ var sv=[].map.call(document.querySelectorAll('input[name=s]:checked'),function(x){return x.value}).join(", ")||"Not selected";
+ var msg="New enquiry from DoctorMedia website%0A%0AName: "+enc(v('n'))+"%0AWhatsApp: "+enc(v('p'))+"%0AEmail: "+enc(v('e')||"-")+"%0AClinic: "+enc(v('c'))+"%0ASpeciality: "+enc(v('sp'))+"%0ABudget: "+enc(v('b'))+"%0AServices: "+enc(sv)+"%0AGoal: "+enc(v('g')||"-");
+ document.getElementById('ok').style.display="block";
+ window.open("https://wa.me/"+WHATSAPP+"?text="+msg,"_blank");
+ function enc(s){return encodeURIComponent(s)}
+});
+</script>
+</body>
+</html>
